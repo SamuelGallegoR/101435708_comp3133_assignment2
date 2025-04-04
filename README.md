@@ -118,4 +118,4 @@ In the backend project, configure environment variables (e.g., DB URL, port) in 
 
 ## 📝 License
 
-MIT License
+🪲 Beetle Labs Inc. 🍋‍🟩 GreenConcept LLC.
