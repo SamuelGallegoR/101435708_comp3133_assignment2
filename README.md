@@ -1,62 +1,90 @@
-Employee Management App
+# Employee Management App
 
-This is a full-stack employee management system built with Angular (Standalone Components) on the frontend and a GraphQL API backend. It allows users to add, view, search, and delete employees with real-time data updates.
+A full-stack employee management system built with **Angular (Standalone Components)** on the frontend and a **GraphQL API** backend. This app allows users to add, view, search, and delete employees with real-time updates and a clean UI.
 
-Features
+---
 
-- Search employees by name, email, or designation
-- Add new employees with form validation
-- Delete employees with confirmation
-- Live photo URL preview in the form
-- Auto-refresh employee list after adding or deleting
+## ✨ Features
 
-Tech Stack
+- 🔍 Search employees by **name**, **email**, or **designation**
+- ➕ Add new employees with **form validation**
+- 🗑️ Delete employees with **confirmation prompts**
+- 🖼️ Live **photo URL preview** in the form
+- 🔄 Auto-refresh of employee list after adding or deleting entries
 
-Frontend
-- Angular 16+ (with standalone components)
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- Angular 16+ (Standalone Components)
 - Reactive Forms
 - Angular Router
 
-Backend (in Docker)
+### Backend (in Docker)
 - Node.js with GraphQL server
 - PostgreSQL database
 - Docker + Docker Compose
 
-Getting Started
+---
 
-1. Clone the Repository
-    git clone https://github.com/yourusername/employee-management-app.git
-    cd employee-management-app
+## 🚀 Getting Started
 
-2. Start Backend (GraphQL + Postgres) via Docker
-    docker-compose up --build
-    > Make sure Docker is installed and running on your machine.
+### 1. Clone the Repository
 
-3. Start Angular Frontend
-    cd frontend
-    npm install
-    ng serve
-    Navigate to: http://localhost:4200
+```bash
+git clone https://github.com/yourusername/employee-management-app.git
+cd employee-management-app
+```
 
-Project Structure
+### 2. Start Backend (GraphQL + Postgres) via Docker
 
-frontend/
-  └── src/
-      ├── app/
-      │   ├── services/graphql.service.ts      # GraphQL API calls
-      │   ├── employee-add/                    # Add employee form
-      │   ├── employee-list/                   # List/search/delete employees
-      │   └── shared/navbar/                   # Navbar component
-backend/
-  ├── server.js                                # GraphQL server entry
-  └── docker-compose.yml                       # Backend container setup
+```bash
+docker-compose up --build
+```
 
-Environment Variables
+> Ensure Docker is installed and running on your machine.
 
-In the backend project, make sure to configure your environment variables (e.g., database URL, port) either in .env or directly in docker-compose.yml.
+### 3. Start Angular Frontend
 
-Example Employee Object
+```bash
+cd frontend
+npm install
+ng serve
+```
 
+Navigate to: [http://localhost:4200](http://localhost:4200)
+
+---
+
+## 📁 Project Structure
+
+```
+employee-management-app/
+│
+├── frontend/
+│   └── src/app/
+│       ├── services/graphql.service.ts     # Handles GraphQL API calls
+│       ├── employee-add/                   # Component to add employees
+│       ├── employee-list/                  # Component to list, search, and delete employees
+│       └── shared/navbar/                  # Navbar component
+│
+├── backend/
+│   ├── server.js                           # GraphQL server entry
+│   └── docker-compose.yml                  # Backend container setup
+```
+
+---
+
+## ⚙️ Environment Variables
+
+In the backend project, configure environment variables (e.g., DB URL, port) in a `.env` file or directly inside `docker-compose.yml`.
+
+---
+
+## 📦 Example Employee Object
+
+```json
 {
   "first_name": "Jane",
   "last_name": "Doe",
@@ -68,19 +96,26 @@ Example Employee Object
   "date_of_joining": "2024-02-15",
   "employee_photo": "https://example.com/photo.jpg"
 }
+```
 
-Contributors
+---
 
-- Samuel Gallego Rivera – Frontend & Architecture
-- [Add your team members here]
+## 👥 Contributors
 
-Future Improvements
+- **Samuel Gallego Rivera** – Frontend & Architecture  
+- [Add your teammates here]
 
-- GraphQL mutations for update operations
-- Profile view per employee
-- Image upload instead of URL field
-- Role-based access control
+---
 
-License
+## 🔮 Future Improvements
 
-MIT
+- GraphQL mutation for **update** operations
+- Individual **profile view** per employee
+- **Image upload** functionality instead of URL input
+- **Role-based access control**
+
+---
+
+## 📝 License
+
+MIT License
